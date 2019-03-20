@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>애국가</title>
+        <script>
+            function clickEvent(num){
+                if(num == 1){
+                    document.getElementById("id_1").innerHTML = "동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 <br/>(후렴) 무궁화 삼천리 화려강산 대한사람 대한으로  <mark style='background-color: yellow'>길이보전하세</mark><br/>";
+                }else if(num == 2){
+                    document.getElementById("id_1").innerHTML = "남산위에 저소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세<br/>(후렴)무궁화 삼천리 화려강산 대한사람 대한으로 <mark style='background-color: yellow'>길이보전하세</mark><br/>";
+                }else if(num == 3){
+                    document.getElementById("id_1").innerHTML = "가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편 단심일세<br/>(후렴)무궁화 삼천리 화려강산 대한 사람 대한으로 <mark style='background-color: yellow'>길이보전하세</mark><br/>";
+                }else if(num == 4){
+                    document.getElementById("id_1").innerHTML = "이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세<br/>(후렴)무궁화 삼천리 화려강산 대한 사람 대한으로 <mark style='background-color: yellow'>길이보전하세</mark><br/>";
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+     애국가
+
+     <p onclick="clickEvent(1)">1절</p>
+     <p onclick="clickEvent(2)">2절</p>
+     <p onclick="clickEvent(3)">3절</p>
+     <p onclick="clickEvent(4)">4절</p>
+    <p id="id_1">메시지표시</p>
+
+    </body>
+</html>
