@@ -1,0 +1,23 @@
+ul#ul_main {
+    display: inline;
+    font-weight: bold;
+    font: 20px sans-serif;
+}
+
+ul#ul_main li {
+    padding-top: 10px;
+}
+
+ul#ul_main li:first-child {
+    padding-top: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+    font-weight: bold;
+}
