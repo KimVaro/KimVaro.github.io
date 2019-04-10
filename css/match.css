@@ -1,3 +1,9 @@
+body{
+    overflow: hidden;
+}
+body:hover{
+    overflow: auto;
+}
 ul#ul_main {
     display: inline;
     font-weight: bold;
