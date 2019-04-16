@@ -1,0 +1,17 @@
+﻿.edit-mode .scEmptyPlaceholder {
+    min-width: 100px
+}
+
+.edit-mode .features-list .scEnabledChrome {
+    width: 100%
+}
+
+@media (min-width: 600px) {
+    .edit-mode .quick-links__item {
+        float: left;
+    }
+
+    .edit-mode .page-links__link {
+        float: left;
+    }
+}

@@ -1,0 +1,1 @@
+﻿require(["vehicleSearch"],function (vehicleSearch) {vehicleSearch.register();});

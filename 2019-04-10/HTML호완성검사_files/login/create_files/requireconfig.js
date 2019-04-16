@@ -1,0 +1,82 @@
+﻿require.config({
+    baseUrl: $("#scriptdomain").val(),
+    paths: {
+        knockout: "lib/knockout/dist/knockout",
+        koMapping: "lib/knockout/dist/knockout-mapping-latest",
+        contactForm: "js/contact/component/component-contact-form",
+        enquiry: "js/enquiry/enquiry",
+        filterOptions: "js/vehiclesearch/component/component-filter-options",
+        vehicleListings: "js/vehiclesearch/component/component-vehicle-listings",
+        vehicleSearchModel: "js/vehiclesearch/vehiclesearch",
+        vehicleSearch: "js/vehiclesearch/component/component-vehicle-search",
+        priceFilterOptions: "js/vehiclesearch/component/component-filter-price-options",
+        postCodeFilter: "js/vehiclesearch/component/component-filter-postcode",
+        knockoutvalidation: "lib/knockout-validation/dist/knockout.validation",
+        searchUtils: "js/vehiclesearch/searchutils",
+        clearFilterBinding: "js/vehiclesearch/clearfilter-binding",
+        vehicleValuationPopup: "js/vehicleValuation/component/component-vehiclevaluation-popup",
+        vehicleValuationModal: "js/vehicleValuation/component/component-vehiclevaluation-modal",
+        vehicleValuationModalRegnumber: "js/vehicleValuation/component/component-vehiclevaluation-modal-regnumber",
+        vehicleValuationVehicleDetails: "js/vehicleValuation/component/component-vehiclevaluation-vehicledetails",
+        vehicleValuationDisplayVehicleDetails: "js/vehicleValuation/component/component-vehiclevaluation-display-vehicledetails",
+        vehicleValuationDisplayValuationDetails: "js/vehicleValuation/component/component-vehiclevaluation-display-valuationdetails",
+        bindingHandlers: "js/common/bindinghandlers",
+        vehicleValuationParent: "js/vehicleValuation/component/component-vehiclevaluation-parent",
+        vehicleValuationSell: "js/vehicleValuation/component/component-vehiclevaluation-sell",
+        vehicle: "js/vehicle/vehicle",
+        quote: "js/finance/quote",
+        financeQuote: "js/finance/component/component-finance-quote",
+        vehicleReservation: "js/reservation/component/component-vehicle-reservation-options",
+        vehicleReservationModel: "js/reservation/vehicle-reservation",
+        reservation: "js/reservation/component/component-reservation-options",
+        reservationModel: "js/reservation/reservation",
+        reservationModal: "js/reservation/component/component-reservation-modal",
+        delivery: "js/delivery/delivery",
+        valuationSellPage: "js/vehicleValuation/sell",
+        valuationBookingPage: "js/vehicleValuation/booking",
+        vehiclevaluationAppointment: "js/vehicleValuation/component/component-vehiclevaluation-appointment",
+        valuationutils: "js/vehicleValuation/valuationutils",
+        appointment: "js/appointment/component/component-appointment",
+        paymentDetails: "js/payment/details",
+        contact: "js/contact/contact",
+        dealerSearch: "js/dealersearch/dealersearch",
+        filters: "js/filters/component/component-filters",
+        appointmentTemplate: "js/appointment/component/component-appointment.html",
+        componentVehicleSearchTemplate: "js/vehiclesearch/component/component-vehicle-search.html",
+        componentVehicleSearchListingsTemplate: "js/vehiclesearch/component/component-vehicle-listings.html",
+        componentVehicleSearchFilterOptionsTemplate: "js/vehiclesearch/component/component-filter-options.html",
+        componentVehicleSearchPriceFilterTemplate: "js/vehiclesearch/component/component-filter-price-options.html",
+        componentVehicleSearchPostcodeTemplate: "js/vehiclesearch/component/component-filter-postcode.html",
+        componentValuationAppTemplate: "js/vehicleValuation/component/component-vehiclevaluation-appointment.html",
+        componentValuationDetailsTemplate: "js/vehicleValuation/component/component-vehiclevaluation-display-valuationdetails.html",
+        componentValuationVehicleDetailsTemplate: "js/vehicleValuation/component/component-vehiclevaluation-display-vehicledetails.html",
+        componentValuationModalRegNumberTemplate: "js/vehicleValuation/component/component-vehiclevaluation-modal-regnumber.html",
+        componentValuationModalTemplate: "js/vehicleValuation/component/component-vehiclevaluation-modal.html",
+        valuationPopupTemplate: "js/vehicleValuation/component/component-vehiclevaluation-popup.html",
+        valuationSellTemplate: "js/vehicleValuation/component/component-vehiclevaluation-sell.html",
+        valuationVehicleDetailsTemplate: "js/vehicleValuation/component/component-vehiclevaluation-vehicledetails.html",
+        contactFormTemplate: "js/contact/component/component-contact-form.html",
+        componentFiltersTemplate: "js/filters/component/component-filters.html",
+        financeQuoteTemplate: "js/finance/component/component-finance-quote.html",
+        reservationModalTemplate: "js/reservation/component/component-reservation-modal.html",
+        reservationTemplate: "js/reservation/component/component-reservation-options.html",
+        vehicleReservationOptionTemplate: "js/reservation/component/component-vehicle-reservation-options.html",
+        navigation: "js/navigation/navigation",
+        megamenu: "js/navigation/megamenu/component-navigation-megamenu",
+        megamenuTemplate: "js/navigation/megamenu/component-navigation-megamenu.html",
+        navfooter: "js/navigation/footer/component-navigation-footer",
+        footerTemplate: "js/navigation/footer/component-navigation-footer.html"
+    },
+    config: {
+        "lib/text": {
+            useXhr: function () {
+                return true;
+            }
+        }
+    },
+    map: {
+        '*': {
+            text: "lib/text"
+        }
+    }
+});
