@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>자동차 선택</title>
+    <!-- <style>
+    fieldset{
+        border-color:lightcoral;
+    }
+    button{
+        background-color: red;
+        color:seashell;
+        border-color: red;
+        font-weight: bold;
+        float: right;
+        text-align: center;
+        width: 173px;
+        height: 46px;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+    }
+    </style> -->
+</head>
+
+<body>
+<fieldset>
+    <legend>자동차</legend>
+    브랜드 : <select name="man" id="man" onchange="selectFirst();"></select>
+    모델 : <select name="model" id="model" onchange="selectSecond();"></select>
+    세부 : <select name="subModel" id="subModel"></select><br>
+</fieldset>
+<script>
+    var man = document.getElementById("man");
+    var model = document.getElementById("model");
+    var subModel = document.getElementById("subModel");
+    var carObj = {
+        "혼다": {
+            "시빅": ["LX", "LX CVT", "Sport","Sport CVT"],
+            "어코드": ["기본","터보 스포츠"],
+            "CR-V 하이브리": ["EX-L 2WD", "EX-L 4WD", "Touring 4WD"],
+        },
+        "쉐보레": {
+            "말리부": ["더 뉴 말리부", "올 뉴 말리부", "말리부"],
+            "크루즈": ["올 뉴 크루즈", "어메이징 뉴 크루즈", "크루즈"],
+            "스파크": ["더 뉴 스파크", "더 넥스트 스파크", "스파크 EV", "스파크"]
+
+        }
+    }
+    let cars = Object.keys(carObj);
+    createOption(cars, man);
+    selectFirst();
+
+    function selectFirst() {
+        model.innerHTML = "";
+        let models = Object.keys(carObj[man.value]);
+        createOption(models, model);
+        selectSecond();
+    }
+
+    function selectSecond() {
+        subModel.innerHTML = "";
+        let subModels = Object.values(carObj[man.value][model.value]);
+        createOption(subModels, subModel);
+    }
+
+    function createOption(arr, s) {
+        arr.forEach(o => {
+            let opt = document.createElement("option");
+            opt.value = o;
+            opt.innerHTML = o;
+            s.add(opt);
+        });
+    }
+</script>
+
+</body>
