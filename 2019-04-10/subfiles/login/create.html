@@ -173,7 +173,7 @@
 <body>
 <header class="page-header page-header--payment">
     <div class="page-header__container">
-       <img src="../logo.gif">
+        <img src="../logo.gif">
     </div>
 </header>
 
@@ -272,10 +272,10 @@
                 <div class="progress-layout__navigation">
                     <a href="../../index.html"
                        class="button button--large button--ghost" id="payment-details-back">뒤로가기</a>
-                    <button type="submit" class="button button--large" id="payment-details-next"
-                            data-bind="click: $data.submit, css: { &#39;button--disabled&#39; : $data.disableSendPaymentButton  }, disable: $data.disableSendPaymentButton">
-                        회원가입
-                    </button>
+                    <input type="submit" class="button button--large" id="payment-details-next"
+                           data-bind="click: $data.submit, css: { &#39;button--disabled&#39; : $data.disableSendPaymentButton  }, disable: $data.disableSendPaymentButton">
+                    회원가입
+                    </input>
                 </div>
                 <div class="loader loader--full" data-bind="visible: showLoader()" style="display: none;"></div>
             </form>
