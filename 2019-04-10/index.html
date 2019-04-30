@@ -25,28 +25,6 @@
     <link rel="preload" as="script" href="subfiles/Utilities.js">
     <link rel="preload" as="script" href="subfiles/neareststore.js">
 
-
-    <!-- Google Tag Manager -->
-    <script type="text/javascript" async="" src="subfiles/f.txt"></script>
-    <script src="subfiles/2221844208083385" async=""></script>
-    <script async="" src="subfiles/fbevents.js"></script>
-    <script type="text/javascript" async="" src="subfiles/analytics.js"></script>
-    <script async="" src="subfiles/gtm.js"></script>
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })
-        (window, document, 'script', 'dataLayer', 'GTM-K6D2B8Z');
-    </script>
-
     <link href="subfiles/unified.css" rel="stylesheet" media="screen">
     <link href="subfiles/style.css" rel="stylesheet" media="screen">
     <link href="subfiles/EditStyles.css" rel="stylesheet" media="screen">
@@ -74,7 +52,6 @@
     <script type="text/javascript" async="" src="subfiles/loader.js"></script>
     <style data-reviewtrackers-styled="" data-styled-version="4.0.3"></style>
     <script src="subfiles/g3.js" type="text/javascript" async="true"></script>
-    <script src="subfiles/f(1).txt"></script>
     <script src="subfiles/pingback.js" type="text/javascript" id="ct_pingback"></script>
 </head>
 <body class="">
@@ -93,7 +70,7 @@
                     <nav class="navigation">
                         <div class="navigation__toggle"></div>
                         <ul class="navigation__list navigation__list--top-level" style="">
-                            <li class="navigation__item" >
+                            <li class="navigation__item">
                                 <a href=""
                                    class="navigation__link navigation__link--has-children" title="구매"
                                    style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
@@ -238,31 +215,69 @@
 
     <aside class="quick-links">
         <div class="quick-links__inner">
+            <div class="quick-links__item"></div>
             <div class="quick-links__item">
-        <span class="quick-links__link">
-            <span class="quick-links__icon"><i class="icon-body-style"></i></span>
-        <span class="quick-links__text">
-                <span class="quick-links__title">5,000 AA inspected cars</span>
+                <span class="quick-links__link">
+                <span class="quick-links__text">
+                    <span class="quick-links__title">
+                        빠른검색 | &nbsp;
                     </span>
-            </span>
-            </div>
-            <div class="quick-links__item">
-        <span class="quick-links__link">
-            <span class="quick-links__icon"><i class="icon-drop-off"></i></span>
-        <span class="quick-links__text">
-                <span class="quick-links__title">Move any car to any store</span>
-                    </span>
-            </span>
-            </div>
-            <div class="quick-links__item">
-        <span class="quick-links__link">
-            <span class="quick-links__icon"><i class="icon-star"></i></span>
-        <span class="quick-links__text">
-                <span class="quick-links__title">4.7/5 Google reviews</span>
-                    </span>
-            </span>
-            </div>
+                brand <select name="brand" id="brand" onchange="selectFirst();"></select>
+                model <select name="model" id="model" onchange="selectSecond();"></select>
+                detail <select name="subModel" id="subModel"></select>
+                    &nbsp;
+                    <input type="button" value="검색" onclick="search();"/>
+                <script>
+                    var brand = document.getElementById("brand");
+                    var model = document.getElementById("model");
+                    var subModel = document.getElementById("subModel");
 
+                    var car_data = {
+                        "혼다": {
+                            "시빅": ["LX", "LX CVT", "Sport", "Sport CVT"],
+                            "어코드": ["CVT", "A/T"],
+                            "CR-V": ["LX 2WD", "LX AWD"]
+                        },
+                        "쉐보레": {
+                            "말리부": ["LS", "LS 디럭스", "LT", "LT 디럭스", "LTZ", "LTZ 퍼펙트", "LTZ 프리미어"],
+                            "크루즈": ["LS", "LS 디럭스", "LT", "LT디럭스", "LTZ", "LTZ 디럭스"],
+                            "스파크": ["LS", "2LT"]
+
+                        }
+                    }
+
+                    let cars = Object.keys(car_data);
+                    createOption(cars, brand);
+                    selectFirst();
+
+                    function selectFirst() {
+                        model.innerHTML = "";
+                        let models = Object.keys(car_data[brand.value]);
+                        createOption(models, model);
+                        selectSecond();
+                    }
+
+                    function selectSecond() {
+                        subModel.innerHTML = "";
+                        let subModels = Object.values(car_data[brand.value][model.value]);
+                        createOption(subModels, subModel);
+                    }
+
+                    function createOption(arr, s) {
+                        arr.forEach(o => {
+                            let opt = document.createElement("option");
+                            opt.value = o;
+                            opt.innerHTML = o;
+                            s.add(opt);
+                        });
+                    }
+                    function search() {
+                        alert("다음을 검색합니다 ["+brand.value+"-"+model.value+"-"+subModel.value+"]");
+                    }
+                </script>
+                    </span>
+                </span>
+            </div>
         </div>
     </aside>
 

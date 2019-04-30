@@ -28,7 +28,8 @@
 <body>
 <fieldset>
     <legend>자동차</legend>
-    브랜드 : <select name="man" id="man" onchange="selectFirst();"></select>
+    브랜드 : <select name="man" id="man" onchange="selectFirst();">
+</select>
     모델 : <select name="model" id="model" onchange="selectSecond();"></select>
     세부 : <select name="subModel" id="subModel"></select><br>
 </fieldset>
@@ -38,14 +39,14 @@
     var subModel = document.getElementById("subModel");
     var carObj = {
         "혼다": {
-            "시빅": ["LX", "LX CVT", "Sport","Sport CVT"],
-            "어코드": ["기본","터보 스포츠"],
-            "CR-V 하이브리": ["EX-L 2WD", "EX-L 4WD", "Touring 4WD"],
+            "시빅": ["LX", "LX CVT", "Sport", "Sport CVT"],
+            "어코드": ["CVT", "A/T"],
+            "CR-V": ["LX 2WD", "LX AWD"]
         },
         "쉐보레": {
-            "말리부": ["더 뉴 말리부", "올 뉴 말리부", "말리부"],
-            "크루즈": ["올 뉴 크루즈", "어메이징 뉴 크루즈", "크루즈"],
-            "스파크": ["더 뉴 스파크", "더 넥스트 스파크", "스파크 EV", "스파크"]
+            "말리부": ["LS", "LS 디럭스", "LT", "LT 디럭스", "LTZ", "LTZ 퍼펙트", "LTZ 프리미어"],
+            "크루즈": ["LS", "LS 디럭스", "LT", "LT디럭스", "LTZ","LTZ 디럭스"],
+            "스파크": ["LS","2LT"]
 
         }
     }
