@@ -5,7 +5,7 @@
     <style>
         #section0 {
             width: 400px;
-            height: 200px;
+            height: 300px;
             border: solid 1px lightgray;
             border-radius: 1em;
         }
@@ -14,52 +14,111 @@
             list-style: none;
         }
 
-        ul.level_1 > li {
+        li {
             display: inline-block;
-            float: right;
         }
-        ul.level_1 > .part1{
-            float: none;
+
+        td{
+            padding: 0 5px 5px 5px;
+        }
+
+        td:not(.table_name) {
+            width: 1px;
+        }
+
+        td.table_name {
+            text-align: right;
+            padding-top: 0px;
+        }
+
+        span.checkbox_item {
+            padding: 0 10px 0 10px;
+        }
+
+        h4{
+            margin: 5px;
         }
 
     </style>
     <title>로그인 실습</title></head>
 <body>
-<section id="section0"><h4>회원 가입</h4>
-    <form action="">
-        <ul class="level_1">
-            <li class="part1">아이디</li>
-            <li><input type="text"></li>
-            <li><input type="button" value="중복확인"></li>
-        </ul>
-        <ul class="level_1">
-            <li class="part1">비밀번호</li>
-            <li><input type="text"></li>
-        </ul>
-        <ul class="level_1">
-            <li class="part1">비밀번호확인</li>
-            <li><input type="text"></li>
-        </ul>
-        <ul class="level_1">
-            <li class="part1">이름</li>
-            <li><input type="text"></li>
-        </ul>
-        <ul class="level_1">
-            <li class="part1">취미</li>
-            <li><input type="checkbox" value="독서">독서</li>
-            <li><input type="checkbox" value="바둑">바둑</li>
-            <li><input type="checkbox" value="낚시">낚시</li>
-        </ul>
-        <ul class="level_1">
-            <li class="part1">가입인사</li>
-            <textarea cols="50" rows="5"></textarea>
-        </ul>
-
-        <ul class="level_1">
-            <li><input type="button" value="회원가입"></li>
-            <li><input type="button" value="취소"></li>
-        </ul>
-    </form>
+<section id="section0"><h4 style="text-align: center">회원 가입</h4>
+    <table border="0">
+        <tr>
+            <ul class="level_1">
+                <td class="table_name">
+                    <li>아이디</li>
+                </td>
+                <td>
+                    <li><input type="text"></li>
+                </td>
+                <td>
+                    <li><input type="button" value="중복확인"></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <ul class="level_1">
+                <td class="table_name">
+                    <li>비밀번호</li>
+                </td>
+                <td>
+                    <li><input type="text"></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <ul class="level_1">
+                <td class="table_name">
+                    <li>비밀번호확인</li>
+                </td>
+                <td>
+                    <li><input type="text"></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <ul class="level_1">
+                <td class="table_name">
+                    <li>이름</li>
+                </td>
+                <td>
+                    <li><input type="text"></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <ul class="level_1">
+                <td class="table_name">
+                    <li>취미</li>
+                </td>
+                <td colspan="2">
+                    <li><input type="checkbox"><span class="checkbox_item">독서</span><input type="checkbox"><span
+                            class="checkbox_item">바둑</span><input
+                            type="checkbox"><span class="checkbox_item">낚시</span></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <ul class="level_1">
+                <td class="table_name" style="vertical-align: top">
+                    <li>가입인사</li>
+                </td>
+                <td colspan="2" style="padding-bottom: 0px">
+                    <li><textarea rows="5" cols="40"></textarea></li>
+                </td>
+            </ul>
+        </tr>
+        <tr>
+            <td class="table_name"></td>
+            <td>
+                <input type="button" value="회원가입" style="float: right">
+            </td>
+            <td>
+                <input type="button" value="취소">
+            </td>
+        </tr>
+    </table>
 </section>
 </body>
 </html>
