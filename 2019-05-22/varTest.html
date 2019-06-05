@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+</head>
+<body>
+<header>
+    <h2>실습 대환영</h2>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="http://hive.dju.ac.kr">실습서버</a>
+        </li>
+    </ul>
+</nav>
+<section><h4>변수 예제 실습</h4>
+    <script>
+        var name = "홍길동", age = 21, flag = true, color = 0xF00;
+        document.write("일반변수 : " + name + age + flag + color + "<br/>");
+
+        function MyClass() {
+            this.name = "홍길순";
+            this.age = "21";
+            this.flag = false;
+            this.nextAge = (a, b) => {
+                document.write(b + "년후 나이는 " + (a + b) + " 입니다. " + "<br/>");
+            }
+        }
+
+        var person = new MyClass();
+        document.write("객체변수 : " + person.name + person.age + person.flag);
+        person.nextAge(person.age, 10);
+        var color16 = color.toString(16);
+        document.write(color + " " + color16);
+
+        $(document).ready(function () {
+            $("footer").css("color", "#" + color16);
+        });
+    </script>
+</section>
+
+</body>
+</html>
